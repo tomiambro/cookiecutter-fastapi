@@ -1,15 +1,16 @@
 {
     "project_name": "FastAPI Backend",
     "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "project_prefix": "{{ cookiecutter.project_name|lower|replace(' ', '_') }}",
     "project_slug_db": "{{ cookiecutter.project_name|lower|replace(' ', '') }}",
 
     "author_email": "change.me@gmail.com",
 
     "py_version": ["3.10", "3.11", "3.9", "3.8"],
 
-    "db_container_name": "{{cookiecutter.project_slug}}_db",
-    "backend_container_name": "{{cookiecutter.project_slug}}_backend",
-    "nginx_container_name": "{{cookiecutter.project_slug}}_nginx",
+    "db_container_name": "{{cookiecutter.project_prefix}}_db",
+    "backend_container_name": "{{cookiecutter.project_prefix}}_backend",
+    "nginx_container_name": "{{cookiecutter.project_prefix}}_nginx",
 
     "doctl_version": "1.92.0",
 
