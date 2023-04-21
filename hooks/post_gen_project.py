@@ -36,6 +36,3 @@ if "{{ cookiecutter.deployments }}" == "no":
     print("Removing deployment files...")
     for p in DEPLOYMENT_FILES:
         remove_file(p)
-
-
-rename_file(".env_example", ".env")

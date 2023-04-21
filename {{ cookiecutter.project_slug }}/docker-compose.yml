@@ -10,7 +10,7 @@ services:
   {{ cookiecutter.db_container_name }}:
     image: postgres:15-alpine
     env_file:
-      - .env
+      - .envs/.local/.postgres
     restart: always
     ports:
       - '5431:5432'
@@ -20,7 +20,8 @@ services:
   {{ cookiecutter.backend_container_name }}:
     restart: always
     env_file:
-      - .env
+      - .envs/.local/.django
+      - .envs/.local/.postgres
     build:
       context: ./{{ cookiecutter.backend_container_name }}
       dockerfile: ./Dockerfile
@@ -45,7 +46,7 @@ services:
     ports:
       - "0.0.0.0:80:80"
     env_file:
-      - .env
+      - .envs/.local/.nginx
     depends_on:
       - {{ cookiecutter.backend_container_name }}
     build:
