@@ -1,0 +1,6 @@
+# Database
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB={{ cookiecutter.project_slug_db }}
+POSTGRES_HOST={{ cookiecutter.db_container_name }}
+POSTGRES_PORT=5432

@@ -1,0 +1,6 @@
+# Nginx
+NGINX_HOST=localhost
+UPSTREAMS=/:{{ cookiecutter.backend_container_name }}:8000
+ENABLE_SSL=
+CERTBOT_EMAIL=
+DOMAIN_LIST=
